@@ -1,3 +1,4 @@
+// Alert
 const alertBanner = document.getElementById("alert");
 
 alertBanner.innerHTML = `<div class="alert-banner">
@@ -13,3 +14,4 @@ alertBanner.addEventListener('click', e => {
         alertBanner.style.display = "none"
     }
 });
+

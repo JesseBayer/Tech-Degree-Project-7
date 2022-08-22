@@ -127,6 +127,8 @@
     text-transform: uppercase;
     font-size: 16px;
     margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .traffic ul {
@@ -142,23 +144,43 @@
     margin: 0 1%;
 }
 
-.placeholder {
+.line-graph,
+.bar-graph,
+.doughnut-graph{
     width: 310px;
 }
 
 /* Social Styles */
 
 .social-container {
-    background-color: rgb(219, 219, 219);
     display: flex;  
     flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(187, 187, 187);
+}
+
+.social-header {
+    font-size: 19px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .social-image {
     fill: white;
     background: rgb(105, 110, 180);
     border-radius: 50%;
-    width: 50px;
+    width: 80px;
+    height: 80px;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.social-logo {
+    width: 60%;
+    height: 60%;
+    margin-top: 17px;
+    margin-left: 17px;
 }
 
 .facebook-container,
@@ -166,6 +188,351 @@
 .twitter-container {
     display: flex;
     flex-direction: row;
-    
+    height: 100px;
+    background-color: rgb(235, 235, 235);
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+    margin: 0 8px 15px 8px;
 }
 
+.social-text {
+    margin-left: 25px;
+    margin-top: 17px;
+}
+
+.social-text h3 {
+    color: rgb(105, 110, 180);
+}
+
+.social-text p {
+    font-size: 40px;
+    color: grey;
+}
+
+/* Members Styles */
+
+.members-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-bottom: 2px solid rgb(214, 214, 214);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.members-container img {
+    display: block;
+    margin: 25px auto;
+    margin-right: auto;
+    width: 30%;
+    border-radius: 50%;
+}
+
+.members-container a {
+    color: rgb(105, 110, 180);
+}
+
+.members-container h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.members h3 {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+/* Widget Container Styles */
+
+.message h3 {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.widget-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+
+.widget-container input {
+    margin: 15px 10px;
+    height: 50px;
+    background-color: rgb(235, 235, 235);
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+}
+
+.widget-container textarea {
+    margin: 15px 10px;
+    height: 150px;
+    background-color: rgb(235, 235, 235);
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+}
+
+.form-field {
+    min-width: 300px;
+    margin: 15px 10px;
+    height: 50px;
+    background-color: rgb(235, 235, 235);
+    border: 2px solid rgb(187, 187, 187);
+    border-radius: 5px;
+}
+
+/* Button Styles */
+.button-primary {
+    margin: 15px 10px;
+    height: 50px;
+    color: rgb(235, 235, 235);
+    background-color: rgb(105, 110, 180);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.button-disabled {
+    background-color: rgb(114, 114, 114); 
+}
+
+.settings-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.settings-button button {
+    margin: 15px 10px;
+    height: 50px;
+    width: 140px;
+    color: rgb(235, 235, 235);
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.settings h3 {
+    margin-left: 10px;
+}
+
+.mail-switch,
+.profile-switch {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.switch-ios {
+    width: 20vw;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.settings-label {
+    margin: 0;
+    padding-top: 5px;
+    padding-left: 10px;
+    width: 33vw;
+}
+
+
+@media (min-width: 768px) {
+    .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas:
+    "header header"
+    "navigation main";
+    }
+
+    .main {
+        width: 93vw;
+    }
+
+    .nav {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .headline {
+        width: 18vw;
+    }
+
+    .tab {
+        display: table;
+        width: 100%;
+    }
+
+    .traffic-header {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .traffic h3 {
+        width: 40vw;
+    }
+
+    .traffic ul {
+        justify-content: end;
+        margin-right: 10px;
+    }
+
+    .traffic li {
+        justify-content: space-evenly;
+        margin-left: 10px;
+    }
+
+    .line-graph {
+        width: 94vw;
+        margin-bottom: 30px;
+        border-bottom: 2px solid rgb(187, 187, 187);
+    }
+
+    .social-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .facebook-container,
+    .insta-container,
+    .twitter-container {
+        width: 30vw;
+        margin: 0;
+    }
+
+    .social-text {
+        margin-left: 10px;
+    }
+
+    .members-container {
+        flex-direction: row;
+    }
+
+    .members h3 {
+        margin-top: 12px;
+    }
+
+    .members img {
+        width: 10%;
+        margin-left: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .members-text {
+        text-align: start;
+        margin-top: 27px;
+    }
+
+    .members-text h3 {
+        margin-left: 0;
+    }
+
+    .date {
+        display: flex;
+        margin-left: auto;
+        margin-top: 41px;
+    }
+
+    .settings h3 {
+        margin-left: 10px;
+    }
+
+    .settings-button {
+        justify-content: space-between;
+    }
+
+    .settings-button button {
+        width: 46vw;
+    }
+
+    .settings .form-field {
+        width: 94vw;
+    }
+}
+
+@media (min-width: 1024px) {
+
+/* Grid Positioning */
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .main-header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .traffic {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .daily {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .mobile {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .social-container {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .membersOne{
+        height: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .membersTwo {
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+
+    .message {
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .settings {
+        grid-column-start:2;
+        grid-column-end: 3; 
+        width: 100px
+    }
+
+    
+/* Styles */
+
+    .members img {
+        width: 15%;
+    }
+
+    .members-text {
+        margin-top: 20px;
+    }
+
+    .members h3 {
+        margin: 0;
+    }
+
+    .members-container p {
+        font-size: 15px;
+    }
+
+    .traffic {
+        border-bottom: 2px solid rgb(187, 187, 187);
+    }
+
+    .daily {
+        border-right: 2px solid rgb(187, 187, 187);
+        border-bottom: 2px solid rgb(187, 187, 187);;
+    }
+    .mobile {
+        border-bottom: 2px solid rgb(187, 187, 187);
+    }
+}
