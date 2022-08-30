@@ -83,7 +83,7 @@
     grid-area: navigation;
     display: flex;
     justify-content: center;
-    background-color: rgb(71, 74, 117);;
+    background-color: rgb(71, 74, 117);
 }
 
 .nav a svg {
@@ -119,11 +119,16 @@
 }
 
 /* Traffic Styles */
-.traffic {
+.traffic,
+.daily,
+.mobile {
     margin-top: 5px;
+    border-bottom: 2px solid rgb(212, 205, 205);
 }
 
-.traffic h3 {
+.traffic h3,
+.daily h3, 
+ .mobile h3{
     text-transform: uppercase;
     font-size: 16px;
     margin-left: 10px;
@@ -137,6 +142,7 @@
     justify-content: space-between; 
     list-style: none;
     padding: 0 5%;
+    margin-bottom: 10px;
 }
 
 .traffic li {
@@ -144,10 +150,8 @@
     margin: 0 1%;
 }
 
-.line-graph,
-.bar-graph,
-.doughnut-graph{
-    width: 310px;
+canvas {
+    margin-bottom: 20px;
 }
 
 /* Social Styles */
@@ -334,6 +338,24 @@
     width: 33vw;
 }
 
+.alert-banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(71, 74, 117);
+    border-radius: 5px;
+    color: white;
+    margin: 15px 10px;
+    width: 90vw;
+    height: 45px;
+}
+
+.alert-banner p {
+    padding-top: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
 
 @media (min-width: 768px) {
     .grid-container {
@@ -448,8 +470,11 @@
         width: 46vw;
     }
 
-    .settings .form-field {
-        width: 94vw;
+    .settings .form-field,
+    .button-primary,
+    .form-field,
+    .widget-container textarea {
+        width:90.5vw;
     }
 }
 
@@ -534,5 +559,14 @@
     }
     .mobile {
         border-bottom: 2px solid rgb(187, 187, 187);
+    }
+
+   .traffic {
+        width:80vw;
+    }
+
+    .mobile,
+    .daily {
+        width: 40vw;
     }
 }
