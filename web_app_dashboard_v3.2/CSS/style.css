@@ -6,6 +6,7 @@
     "header"
     "navigation"
     "main";
+    max-width: 1024px;
 }
 * {
     box-sizing: border-box;
@@ -160,7 +161,7 @@ canvas {
     display: flex;  
     flex-direction: column;
     padding-bottom: 20px;
-    border-bottom: 2px solid rgb(187, 187, 187);
+    border-bottom: 2px solid rgb(233, 233, 233);
 }
 
 .social-header {
@@ -194,7 +195,7 @@ canvas {
     flex-direction: row;
     height: 100px;
     background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(187, 187, 187);
+    border: 2px solid rgb(233, 233, 233);
     border-radius: 5px;
     margin: 0 8px 15px 8px;
 }
@@ -264,7 +265,7 @@ canvas {
     margin: 15px 10px;
     height: 50px;
     background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(187, 187, 187);
+    border: 2px solid rgb(233, 233, 233);
     border-radius: 5px;
 }
 
@@ -272,7 +273,7 @@ canvas {
     margin: 15px 10px;
     height: 150px;
     background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(187, 187, 187);
+    border: 2px solid rgb(233, 233, 233);
     border-radius: 5px;
 }
 
@@ -281,7 +282,7 @@ canvas {
     margin: 15px 10px;
     height: 50px;
     background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(187, 187, 187);
+    border: 2px solid rgb(233, 233, 233);
     border-radius: 5px;
 }
 
@@ -359,7 +360,7 @@ canvas {
 
 @media (min-width: 768px) {
     .grid-container {
-    grid-template-columns: 55px 1fr;
+    grid-template-columns: 70px 1fr;
     grid-template-areas:
     "header header"
     "navigation main";
@@ -380,7 +381,7 @@ canvas {
 
     .tab {
         display: table;
-        width: 100%;
+        width: 80vw;
     }
 
     .traffic-header {
@@ -408,7 +409,7 @@ canvas {
     .line-graph {
         width: 94vw;
         margin-bottom: 30px;
-        border-bottom: 2px solid rgb(187, 187, 187);
+        border-bottom: 2px solid rgb(233, 233, 233);
     }
 
     .social-container {
@@ -484,13 +485,18 @@ canvas {
 
     .main {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 46.5vw 46.5vw;
         grid-template-rows: auto;
     }
 
     .main-header{
         grid-column-start: 1;
         grid-column-end: 3;
+    }
+
+    .alert {
+        grid-column-start: 1;
+        grid-column-end: 3; 
     }
 
     .traffic {
@@ -510,7 +516,6 @@ canvas {
         grid-column-end: 3;
     }
     .membersOne{
-        height: 100%;
         grid-column-start: 1;
         grid-column-end: 2;
     }
@@ -527,7 +532,6 @@ canvas {
     .settings {
         grid-column-start:2;
         grid-column-end: 3; 
-        width: 100px
     }
 
     
@@ -550,23 +554,86 @@ canvas {
     }
 
     .traffic {
-        border-bottom: 2px solid rgb(187, 187, 187);
+        border-bottom: 2px solid rgb(233, 233, 233);
+    }
+
+    .traffic-nav {
+        margin-top: 10px;
+    }
+
+    .traffic ul {
+        padding-right: 0;
     }
 
     .daily {
-        border-right: 2px solid rgb(187, 187, 187);
-        border-bottom: 2px solid rgb(187, 187, 187);;
+        border-right: 2px solid rgb(233, 233, 233);
+        border-bottom: 2px solid rgb(233, 233, 233);;
     }
     .mobile {
-        border-bottom: 2px solid rgb(187, 187, 187);
+        border-bottom: 2px solid rgb(233, 233, 233);
     }
 
    .traffic {
-        width:80vw;
+        width:93vw;
     }
 
     .mobile,
-    .daily {
-        width: 40vw;
+    .daily,
+    .members,
+    .message{
+        width: 46.5vw;
     }
+
+    .settings .form-field,
+    .button-primary,
+    .form-field, 
+    .widget-container textarea {
+        width: 44vw;
+    }
+
+    .settings-label,
+    .switch-ios {
+        padding-bottom: 35px;
+    }
+
+    .settings .form-field {
+        margin-top: 42px;
+    }
+
+    .settings h3 {
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    .message,
+    .settings {
+        border-left: 2px solid rgb(233, 233, 233);
+        border-top: 2px solid rgb(233, 233, 233);
+    }
+
+    .members-container:last-child {
+        border-bottom: none;
+    }
+
+    .membersTwo {
+        border-left: 2px solid rgb(233, 233, 233);
+    }
+
+    .headline {
+        width: 12vw;
+    }
+
+    .tab {
+        width: 81vw;
+    }
+
+    
+    
+}
+
+.traffic-nav-link:active {
+    border: solid 1px purple;
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
 }

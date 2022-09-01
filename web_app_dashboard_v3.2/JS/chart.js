@@ -2,11 +2,9 @@
 const trafficCanvas = document.getElementById('traffic-chart');
 
 let trafficData = {
-    labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
-    "4-10", "11-17", "18-24", "25-31"],
+    labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"],
     datasets: [{
-    data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
-    2500],
+    data: [24, 73, 62, 108, 234, 82, 79, 27, 65, 10, 52],
     backgroundColor: 'rgba(116, 119, 191, .3)',
     borderWidth: 1,
     }]
@@ -16,9 +14,6 @@ let trafficOptions = {
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
     aspectRatio: 2.5,
-    animation: {
-    duration: 0
-    },
     scales: {
     y: {
     beginAtZero: true
@@ -36,6 +31,88 @@ let trafficChart = new Chart(trafficCanvas, {
     data: trafficData,
     options: trafficOptions
 });
+
+function updateChartHourly() {
+
+    trafficChart.data.labels= ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11"]
+    trafficChart.data.datasets[0].data = [24, 73, 62, 108, 234, 82, 79, 27, 65, 10, 52];
+    trafficChart.update();
+}
+
+function updateChartDaily() {
+
+
+    trafficChart.data.labels= ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    trafficChart.data.datasets[0].data = [200, 110, 170, 190, 215, 187, 301];
+    trafficChart.update();
+}
+
+function updateChartWeekly() {
+
+
+    trafficChart.data.labels= ["1-7", "8-14", "15-21", "22-28", "29-31"]
+    trafficChart.data.datasets[0].data = [1373, 1287, 1421, 1349, 512];
+    trafficChart.update();
+}
+
+function updateChartMonthly() {
+
+
+    trafficChart.data.labels= ["January", "February", "March", "April", "May", "June"]
+    trafficChart.data.datasets[0].data = [5942, 5437, 5802, 6037, 6254, 6177];
+    trafficChart.update();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Bar Graph
 
