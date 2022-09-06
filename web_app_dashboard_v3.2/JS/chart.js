@@ -64,56 +64,6 @@ function updateChartMonthly() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Bar Graph
 
 const dailyCanvas = document.getElementById("daily-chart");
