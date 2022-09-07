@@ -30,101 +30,6 @@ alertWrapper.addEventListener('click', e => {
     } 
 });
 
-// Auto-complete
-let userNames = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
-
-
-function autocomplete(inp, arr) {
-
-    let currentFocus;
-
-    inp.addEventListener("input", function(e) {
-
-        let resultsDiv, matchDiv, i, val = this.value;
-        closeAllLists();
-
-        if (!val) { 
-            return false;
-        }
-
-        currentFocus = -1;
-        resultsDiv = document.createElement("DIV");
-        resultsDiv.setAttribute("id", this.id + "autocomplete-list");
-        resultsDiv.setAttribute("class", "autocomplete-items");
-        this.parentNode.appendChild(resultsDiv);
-
-        for (i = 0; i < arr.length; i++) {
-
-          if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-
-            matchDiv = document.createElement("DIV");
-            matchDiv.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-            matchDiv.innerHTML += arr[i].substr(val.length);
-            matchDiv.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-            matchDiv.addEventListener("click", function(e) {
-                inp.value = this.getElementsByTagName("input")[0].value;
-                closeAllLists();
-            });
-            resultsDiv.appendChild(matchDiv);
-          }
-        }
-    });
-
-inp.addEventListener("keydown", function(e) {
-    let x = document.getElementById(this.id + "autocomplete-list");
-    if (x) x = x.getElementsByTagName("div");
-    if (e.keyCode == 40) {
-      
-      currentFocus++;
-      addActive(x);
-
-    } 
-    else if (e.keyCode == 38) { //up
-
-      currentFocus--;
-      addActive(x);
-
-    } 
-    else if (e.keyCode == 13) {
-
-      e.preventDefault();
-      if (currentFocus > -1) {
-        if (x) x[currentFocus].click();
-      }
-    }
-});
-function addActive(x) {
-
-  if (!x) return false;
-
-  removeActive(x);
-  if (currentFocus >= x.length) currentFocus = 0;
-  if (currentFocus < 0) currentFocus = (x.length - 1);
-
-  x[currentFocus].classList.add("autocomplete-active");
-}
-function removeActive(x) {
-
-  for (let i = 0; i < x.length; i++) {
-    x[i].classList.remove("autocomplete-active");
-  }
-}
-function closeAllLists(elmnt) {
-
-  let x = document.getElementsByClassName("autocomplete-items");
-  for (let i = 0; i < x.length; i++) {
-    if (elmnt != x[i] && elmnt != inp) {
-    x[i].parentNode.removeChild(x[i]);
-  }
-}
-}
-
-document.addEventListener("click", function (e) {
-  closeAllLists(e.target);
-});
-}
-
-
 
 //Local Storage
 let mailToggle = document.getElementById("mailToggle");
@@ -171,13 +76,31 @@ send.addEventListener('click', () => {
 });
 
 
+// Auto-complete
+let userNames = ["Victoria Chambers", "Dale Byrd", "Dawn Wood", "Dan Oliver"];
 
+user.addEventListener("keyup", (e) => {
+  removeNames();
 
+  for (let i of userNames) {
+    if (i.toLowerCase().startsWith(user.value.toLowerCase()) && user.value != "") {
+      let listItem = document.createElement("li");
+      listItem.classList.add("list-items");
+      listItem.setAttribute("onclick", "displayNames('" + i + "')")
+      listItem.innerHTML = i;
+      document.querySelector(".list").appendChild(listItem);
+    }
+  }
+});
 
+function displayNames(value) {
+  user.value = value;
+  removeNames();
+}
 
-
-
-
-
-
-
+function removeNames() {
+  let items = document.querySelectorAll(".list-items");
+  items.forEach((item) =>{
+    item.remove();
+  })
+}
