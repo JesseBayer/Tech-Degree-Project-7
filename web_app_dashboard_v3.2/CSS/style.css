@@ -71,6 +71,31 @@
     margin-right: 5px;
 }
 
+.bell-icon:hover {
+    animation-duration: 2s;
+    animation-name: jingle-grow;
+    transition-timing-function: ease-out;
+}
+
+@keyframes jingle-grow {
+
+    35% {    
+        transform: rotate(0.05turn);
+    }
+
+    65%{
+        transform: rotate(-0.05turn);
+    }
+
+    95% {
+        transform: scale(1.45); 
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
 .line {
     width: 2px;
     height: 45px;
@@ -339,7 +364,8 @@ canvas {
     width: 33vw;
 }
 
-.alert-banner {
+.alert-banner-one,
+ .alert-banner-two {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -351,7 +377,8 @@ canvas {
     height: 45px;
 }
 
-.alert-banner p {
+.alert-banner-one p,
+.alert-banner-two p {
     padding-top: 12px;
     padding-right: 10px;
     padding-left: 10px;
