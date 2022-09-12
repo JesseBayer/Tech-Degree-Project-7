@@ -57,6 +57,9 @@ save.addEventListener('click', () => {
 
 cancel.addEventListener('click', () => {
   localStorage.clear();
+  document.getElementById('mailToggle').checked = false;
+  document.getElementById('profileToggle').checked = false;
+  document.getElementById('timezone').selectedIndex = 0;
 });
 
 
