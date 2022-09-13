@@ -594,6 +594,9 @@ canvas {
 @media (min-width: 1024px) {
 
 /* Grid Positioning */
+    .grid-container {
+        max-width: 1024px;
+    }
 
     .main {
         display: grid;
