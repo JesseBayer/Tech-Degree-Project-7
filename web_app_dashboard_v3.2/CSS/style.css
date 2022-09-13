@@ -595,7 +595,7 @@ canvas {
 
 /* Grid Positioning */
     .grid-container {
-        max-width: 1024px;
+        max-width: 100%;
     }
 
     .main {
