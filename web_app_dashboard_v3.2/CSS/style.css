@@ -20,7 +20,7 @@
 
 .header {
     grid-area: header;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     background-color: rgb(105, 110, 180);
@@ -305,7 +305,7 @@ canvas {
 
 .form-field {
     min-width: 300px;
-    width: 93vw;
+    width: 93%;
     margin: 15px 10px;
     height: 50px;
     background-color: rgb(235, 235, 235);
@@ -356,7 +356,7 @@ canvas {
 }
 
 .switch-ios {
-    width: 20vw;
+    width: 20%;
     margin-left: auto;
     margin-right: 20px;
 }
@@ -365,7 +365,7 @@ canvas {
     margin: 0;
     padding-top: 5px;
     padding-left: 10px;
-    width: 33vw;
+    width: 33%;
 }
 
 .alert-banner-one,
@@ -377,7 +377,7 @@ canvas {
     border-radius: 5px;
     color: white;
     margin: 15px 10px;
-    width: 90vw;
+    width: 90%;
     height: 45px;
 }
 
@@ -405,8 +405,7 @@ canvas {
 
     .main {
         display: grid;
-        width: 91vw;
-        grid-template-columns: 46.5vw 46.5vw;
+        grid-template-columns: 45.5vw 45.5vw;
         grid-template-rows: auto;
     }
 
@@ -461,12 +460,12 @@ canvas {
     }
 
     .headline {
-        width: 18vw;
+        width: 16%;
     }
 
     .tab {
         display: table;
-        width: 80vw;
+        width: 84%;
     }
 
     .traffic-header {
@@ -478,7 +477,7 @@ canvas {
     }
 
     .traffic h3 {
-        width: 40vw;
+        width: 40%;
     }
 
     .traffic ul {
@@ -491,12 +490,6 @@ canvas {
         margin-left: 10px;
     }
 
-    .line-graph {
-        width: 94vw;
-        margin-bottom: 30px;
-        border-bottom: 2px solid rgb(233, 233, 233);
-    }
-
     .social-container {
         flex-direction: row;
         justify-content: space-evenly;
@@ -505,7 +498,7 @@ canvas {
     .facebook-container,
     .insta-container,
     .twitter-container {
-        width: 30vw;
+        width: 30%;
         margin: 0;
     }
 
@@ -549,18 +542,18 @@ canvas {
     }
 
     .settings-button {
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .settings-button button {
-        width: 46vw;
+        width: 46%;
     }
 
     .settings .form-field,
     .button-primary,
     .form-field,
     .widget-container textarea {
-        width: 88vw;
+        width: 96%;
     }
 
     .mobile {
@@ -578,7 +571,28 @@ canvas {
         display: block;
         padding-top: 38px;
     }
-   
+
+    .social-logo {
+        width: 47%;
+        height: 60%;
+        margin-top: 21px;
+        margin-left: 22px;
+    }
+
+    .social-image {
+        fill: white;
+        background: rgb(105, 110, 180);
+        border-radius: 61%;
+        width: 80px;
+        height: 80px;
+        margin-top: 8px;
+        margin-left: 8px;
+    }
+
+    .social-text p {
+        font-size: 33px;
+        color: grey;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -683,7 +697,7 @@ canvas {
     .daily,
     .members,
     .message{
-        width: 46.5vw;
+        width: 100%;
     }
 
     .settings .form-field,
@@ -699,7 +713,7 @@ canvas {
     }
 
     .settings .form-field {
-        margin-top: 42px;
+        margin-top: 10px;
     }
 
     .settings h3 {
@@ -739,6 +753,18 @@ canvas {
         padding-right: 22px;
         display: block;
         padding-top: 25px;
+    }
+    
+    .widget-container textarea {
+        height: 14vh;
+    }
+
+    .settings-label {
+        width: 54%;
+    }
+
+    .switch-ios {
+        width: 38%;
     }
     
 }
